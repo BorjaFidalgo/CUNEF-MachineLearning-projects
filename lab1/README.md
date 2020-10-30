@@ -1,10 +1,137 @@
-# EDA Credit Card Fraud
-Entrega 1 ML 00_EDA
-## Borja Fidalgo Martínez-Merello
-### 30/10/2020
-El Dataset `creditcard.csv` contiene transacciones realizadas con tarjetas de crédito en dos días de septiembre de 2013, por usuarios europeos. Contiene 492 observaciones con fraude de un total de 284.807 lo que representa un 0,172%.
-Contiene 4 tipos de variables:
-- __Time__: segundos transcurridos entre cada transacción y la primera transacción en el Dataset.
-- __V1, V2, V3..V28__: Por confidencialidad, son componentes principales por Análisis de Componentes Principales (ACP)
-- __Amount__: Importe de la transacción
-- __Class__: 1 = fraude; 0 = no fraude
+name: eda_env
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - appnope=0.1.0=py38h32f6830_1002
+  - argon2-cffi=20.1.0=py38h4d0b108_2
+  - async_generator=1.10=py_0
+  - attrs=20.2.0=pyh9f0ad1d_0
+  - backcall=0.2.0=pyh9f0ad1d_0
+  - backports=1.0=py_2
+  - backports.functools_lru_cache=1.6.1=py_0
+  - bleach=3.2.1=pyh9f0ad1d_0
+  - brotlipy=0.7.0=py38h94c058a_1001
+  - ca-certificates=2020.6.20=hecda079_0
+  - certifi=2020.6.20=py38h5347e94_2
+  - cffi=1.14.3=py38h9edaa1b_1
+  - chardet=3.0.4=py38h5347e94_1008
+  - confuse=1.3.0=pyh9f0ad1d_0
+  - cryptography=3.2=py38hf6767f5_0
+  - cycler=0.10.0=py_2
+  - decorator=4.4.2=py_0
+  - defusedxml=0.6.0=py_0
+  - entrypoints=0.3=py38h32f6830_1002
+  - freetype=2.10.4=ha233b18_0
+  - htmlmin=0.1.12=py_1
+  - idna=2.10=pyh9f0ad1d_0
+  - imagehash=4.1.0=pyh9f0ad1d_0
+  - importlib-metadata=2.0.0=py_1
+  - importlib_metadata=2.0.0=1
+  - ipykernel=5.3.4=py38h5ca1d4c_0
+  - ipython=7.18.1=py38h1cdfbd6_1
+  - ipython_genutils=0.2.0=py_1
+  - ipywidgets=7.5.1=pyh9f0ad1d_1
+  - jedi=0.17.2=py38h32f6830_1
+  - jinja2=2.11.2=pyh9f0ad1d_0
+  - joblib=0.17.0=py_0
+  - jpeg=9d=h0b31af3_0
+  - json5=0.9.5=pyh9f0ad1d_0
+  - jsonschema=3.2.0=py_2
+  - jupyter_client=6.1.7=py_0
+  - jupyter_core=4.6.3=py38h32f6830_2
+  - jupyterlab=2.2.9=py_0
+  - jupyterlab_pygments=0.1.2=pyh9f0ad1d_0
+  - jupyterlab_server=1.2.0=py_0
+  - kiwisolver=1.3.0=py38h02bb52f_0
+  - lcms2=2.11=h174193d_0
+  - libblas=3.9.0=2_openblas
+  - libcblas=3.9.0=2_openblas
+  - libcxx=11.0.0=h439d374_0
+  - libffi=3.2.1=hb1e8313_1007
+  - libgfortran=5.0.0=h7cc5361_13
+  - libgfortran5=9.3.0=h7cc5361_13
+  - liblapack=3.9.0=2_openblas
+  - libllvm10=10.0.1=h009f743_3
+  - libopenblas=0.3.12=openmp_h54245bb_1
+  - libpng=1.6.37=hb0a8c7a_2
+  - libsodium=1.0.18=haf1e3a3_1
+  - libtiff=4.1.0=h2ae36a8_6
+  - libwebp-base=1.1.0=h0b31af3_3
+  - llvm-openmp=11.0.0=h73239a0_1
+  - llvmlite=0.34.0=py38h3707e27_2
+  - lz4-c=1.9.2=hb1e8313_3
+  - markupsafe=1.1.1=py38h94c058a_2
+  - matplotlib-base=3.3.2=py38had0acaf_1
+  - missingno=0.4.2=py_1
+  - mistune=0.8.4=py38h4d0b108_1002
+  - nbclient=0.5.1=py_0
+  - nbconvert=6.0.7=py38h32f6830_2
+  - nbformat=5.0.8=py_0
+  - ncurses=6.2=hb1e8313_2
+  - nest-asyncio=1.4.1=py_0
+  - networkx=2.5=py_0
+  - notebook=6.1.4=py38h32f6830_1
+  - numba=0.51.2=py38h6be0db6_0
+  - numpy=1.19.2=py38ha98150c_1
+  - olefile=0.46=pyh9f0ad1d_1
+  - openssl=1.1.1h=haf1e3a3_0
+  - packaging=20.4=pyh9f0ad1d_0
+  - pandas=1.1.3=py38hb1e8313_0
+  - pandas-profiling=2.9.0=pyh9f0ad1d_0
+  - pandoc=2.11.0.4=h22f3db7_0
+  - pandocfilters=1.4.2=py_1
+  - parso=0.7.1=pyh9f0ad1d_0
+  - patsy=0.5.1=py_0
+  - pexpect=4.8.0=pyh9f0ad1d_2
+  - phik=0.10.0=py_0
+  - pickleshare=0.7.5=py_1003
+  - pillow=8.0.1=py38hef457fe_0
+  - pip=20.2.4=py_0
+  - prometheus_client=0.8.0=pyh9f0ad1d_0
+  - prompt-toolkit=3.0.8=py_0
+  - ptyprocess=0.6.0=py_1001
+  - pycparser=2.20=pyh9f0ad1d_2
+  - pygments=2.7.2=py_0
+  - pyopenssl=19.1.0=py_1
+  - pyparsing=2.4.7=pyh9f0ad1d_0
+  - pyrsistent=0.17.3=py38h4d0b108_1
+  - pysocks=1.7.1=py38h5347e94_2
+  - python=3.8.6=hcfdab8c_0_cpython
+  - python-dateutil=2.8.1=py_0
+  - python_abi=3.8=1_cp38
+  - pytz=2020.1=pyh9f0ad1d_0
+  - pywavelets=1.1.1=py38h174b24a_3
+  - pyyaml=5.3.1=py38h94c058a_1
+  - pyzmq=19.0.2=py38h2c785a9_2
+  - readline=8.0=h0678c8f_2
+  - requests=2.24.0=pyh9f0ad1d_0
+  - scipy=1.5.2=py38h2a334b3_2
+  - seaborn=0.11.0=0
+  - seaborn-base=0.11.0=py_0
+  - send2trash=1.5.0=py_0
+  - setuptools=49.6.0=py38h5347e94_2
+  - six=1.15.0=pyh9f0ad1d_0
+  - sqlite=3.33.0=h960bd1c_1
+  - statsmodels=0.12.0=py38h174b24a_1
+  - tangled-up-in-unicode=0.0.6=pyh9f0ad1d_0
+  - terminado=0.9.1=py38h32f6830_1
+  - testpath=0.4.4=py_0
+  - tk=8.6.10=hb0a8c7a_1
+  - tornado=6.0.4=py38h4d0b108_2
+  - tqdm=4.51.0=pyh9f0ad1d_0
+  - traitlets=5.0.5=py_0
+  - urllib3=1.25.11=py_0
+  - visions=0.5.0=pyh9f0ad1d_0
+  - wcwidth=0.2.5=pyh9f0ad1d_2
+  - webencodings=0.5.1=py_1
+  - wheel=0.35.1=pyh9f0ad1d_0
+  - widgetsnbextension=3.5.1=py38h32f6830_4
+  - xz=5.2.5=haf1e3a3_1
+  - yaml=0.2.5=haf1e3a3_0
+  - zeromq=4.3.3=hb1e8313_2
+  - zipp=3.4.0=py_0
+  - zlib=1.2.11=h7795811_1010
+  - zstd=1.4.5=h289c70a_2
+prefix: /Users/borjacunef/opt/anaconda3/envs/eda_env
