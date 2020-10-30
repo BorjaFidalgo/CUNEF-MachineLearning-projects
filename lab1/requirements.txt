@@ -1,0 +1,9 @@
+Pasos para ejecutar el análisis si me descargo la carpeta del proyecto 
+
+Ejemplo:
+
+- Crear el entorno
+
+- Primero tenemos que instalar las dependencias del entorno
+
+- Segundo ejecutar 'x' comando
